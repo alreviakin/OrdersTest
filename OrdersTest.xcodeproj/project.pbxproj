@@ -9,19 +9,33 @@
 /* Begin PBXBuildFile section */
 		AEC2DAAE2B19F2F500D10474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DAAD2B19F2F500D10474 /* AppDelegate.swift */; };
 		AEC2DAB02B19F2F500D10474 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DAAF2B19F2F500D10474 /* SceneDelegate.swift */; };
-		AEC2DAB22B19F2F500D10474 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DAB12B19F2F500D10474 /* ViewController.swift */; };
 		AEC2DAB72B19F2F600D10474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEC2DAB62B19F2F600D10474 /* Assets.xcassets */; };
 		AEC2DABA2B19F2F600D10474 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC2DAB82B19F2F600D10474 /* LaunchScreen.storyboard */; };
+		AEC2DAC52B1A459600D10474 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DAC42B1A459600D10474 /* AuthViewController.swift */; };
+		AEC2DAC72B1A45BF00D10474 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DAC62B1A45BF00D10474 /* AuthView.swift */; };
+		AEC2DACB2B1A6F2700D10474 /* AuthViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DACA2B1A6F2700D10474 /* AuthViewDelegate.swift */; };
+		AEC2DAD02B1A6F9200D10474 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DACF2B1A6F9200D10474 /* ProfileViewController.swift */; };
+		AEC2DAD22B1A70A000D10474 /* AuthViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DAD12B1A70A000D10474 /* AuthViewControllerDelegate.swift */; };
+		AEC2DAD42B1A713800D10474 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DAD32B1A713800D10474 /* ProfileView.swift */; };
+		AEC2DAD62B1A714400D10474 /* ProfileViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DAD52B1A714400D10474 /* ProfileViewDelegate.swift */; };
+		AEC2DAD82B1A726600D10474 /* ProfileViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2DAD72B1A726600D10474 /* ProfileViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AEC2DAAA2B19F2F500D10474 /* OrdersTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrdersTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC2DAAD2B19F2F500D10474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEC2DAAF2B19F2F500D10474 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AEC2DAB12B19F2F500D10474 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AEC2DAB62B19F2F600D10474 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEC2DAB92B19F2F600D10474 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEC2DABB2B19F2F600D10474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEC2DAC42B1A459600D10474 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		AEC2DAC62B1A45BF00D10474 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		AEC2DACA2B1A6F2700D10474 /* AuthViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewDelegate.swift; sourceTree = "<group>"; };
+		AEC2DACF2B1A6F9200D10474 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AEC2DAD12B1A70A000D10474 /* AuthViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewControllerDelegate.swift; sourceTree = "<group>"; };
+		AEC2DAD32B1A713800D10474 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AEC2DAD52B1A714400D10474 /* ProfileViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewDelegate.swift; sourceTree = "<group>"; };
+		AEC2DAD72B1A726600D10474 /* ProfileViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +68,9 @@
 		AEC2DAAC2B19F2F500D10474 /* OrdersTest */ = {
 			isa = PBXGroup;
 			children = (
+				AEC2DACC2B1A6F7600D10474 /* Main */,
+				AEC2DAC32B1A457800D10474 /* Auth */,
 				AEC2DAC12B19F3B700D10474 /* Application */,
-				AEC2DAB12B19F2F500D10474 /* ViewController.swift */,
 				AEC2DAC22B19F3C600D10474 /* SupportingFiles */,
 			);
 			path = OrdersTest;
@@ -78,6 +93,60 @@
 				AEC2DABB2B19F2F600D10474 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		AEC2DAC32B1A457800D10474 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AEC2DAC92B1A6F0200D10474 /* Controller */,
+				AEC2DAC82B1A6EFC00D10474 /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AEC2DAC82B1A6EFC00D10474 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AEC2DAC62B1A45BF00D10474 /* AuthView.swift */,
+				AEC2DACA2B1A6F2700D10474 /* AuthViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AEC2DAC92B1A6F0200D10474 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AEC2DAC42B1A459600D10474 /* AuthViewController.swift */,
+				AEC2DAD12B1A70A000D10474 /* AuthViewControllerDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AEC2DACC2B1A6F7600D10474 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AEC2DACE2B1A6F7F00D10474 /* Controller */,
+				AEC2DACD2B1A6F7900D10474 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AEC2DACD2B1A6F7900D10474 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AEC2DAD32B1A713800D10474 /* ProfileView.swift */,
+				AEC2DAD52B1A714400D10474 /* ProfileViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AEC2DACE2B1A6F7F00D10474 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AEC2DACF2B1A6F9200D10474 /* ProfileViewController.swift */,
+				AEC2DAD72B1A726600D10474 /* ProfileViewControllerDelegate.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +219,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEC2DAB22B19F2F500D10474 /* ViewController.swift in Sources */,
 				AEC2DAAE2B19F2F500D10474 /* AppDelegate.swift in Sources */,
+				AEC2DAD42B1A713800D10474 /* ProfileView.swift in Sources */,
+				AEC2DAC52B1A459600D10474 /* AuthViewController.swift in Sources */,
+				AEC2DAC72B1A45BF00D10474 /* AuthView.swift in Sources */,
+				AEC2DAD02B1A6F9200D10474 /* ProfileViewController.swift in Sources */,
+				AEC2DAD62B1A714400D10474 /* ProfileViewDelegate.swift in Sources */,
+				AEC2DACB2B1A6F2700D10474 /* AuthViewDelegate.swift in Sources */,
+				AEC2DAD22B1A70A000D10474 /* AuthViewControllerDelegate.swift in Sources */,
+				AEC2DAD82B1A726600D10474 /* ProfileViewControllerDelegate.swift in Sources */,
 				AEC2DAB02B19F2F500D10474 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
