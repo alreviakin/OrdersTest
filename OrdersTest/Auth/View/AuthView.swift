@@ -66,7 +66,16 @@ class AuthView: UIView {
         return btn
     }()
     
-    func didLoad() {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configure()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func configure() {
         backgroundColor = .white
         self.addSubview(titleLabel)
         self.addSubview(signInLabel)

@@ -15,7 +15,6 @@ class AuthViewController: UIViewController {
     
     override func loadView() {
         self.view = authView
-        authView.didLoad()
         authView.delegate = self
         
     }
@@ -28,7 +27,7 @@ class AuthViewController: UIViewController {
 extension AuthViewController: AuthViewControllerDelegate {
     func signIn() {
         
-        let vc = ProfileViewController()
+        let vc = OrdersViewController()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
