@@ -13,24 +13,30 @@ class ProfileViewController: UIViewController {
     
     override func loadView() {
         self.view = profileView
-        profileView.didLoad()
         profileView.delegate = self
+        profileView.baseDelegate = self
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .red
     }
 }
 
 extension ProfileViewController: ProfileViewControllerDelegate {
-    func transitionToProfile() {
-        
+    func logOut() {
+        dismiss(animated: true)
+    }
+}
+
+extension ProfileViewController: BaseControllerDelegaete {
+    func transitionToOrders() {
+        let vc = TabBarViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
-    func transitionToOrders() {
-        
+    func transitionToProfile() {
+        //
     }
     
     

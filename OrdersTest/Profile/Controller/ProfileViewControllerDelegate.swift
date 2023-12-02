@@ -8,6 +8,5 @@
 import Foundation
 
 protocol ProfileViewControllerDelegate: AnyObject {
-    func transitionToProfile()
-    func transitionToOrders()
+    func logOut()
 }
