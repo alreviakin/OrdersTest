@@ -39,7 +39,7 @@ extension AuthViewController: AuthViewControllerDelegate {
                 if error != nil {
                     self.authView.showError()
                 } else {
-                    let vc = OrdersViewController()
+                    let vc = TabBarViewController()
                     vc.modalPresentationStyle = .fullScreen
                     self.present(vc, animated: true)
                 }

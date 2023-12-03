@@ -13,6 +13,17 @@ class MapsViewController: UIViewController {
     
     override func loadView() {
         self.view = mapsView
+        FirebaseManager.shared.getOrders { orders in
+            for order in orders {
+                print(order.position)
+                guard order.position != nil else {
+                    continue
+                }
+                DispatchQueue.main.async {
+                    self.mapsView.setMarker(title: order.name, latitude: order.position!.latitude, longitude: order.position!.longitude)
+                }
+            }
+        }
     }
 
     override func viewDidLoad() {

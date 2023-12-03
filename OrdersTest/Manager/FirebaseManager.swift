@@ -37,11 +37,11 @@ class FirebaseManager {
     func logOut(completion: @escaping (String?) -> Void) {
         let firebaseAuth = Auth.auth()
         do {
-          try firebaseAuth.signOut()
+            try firebaseAuth.signOut()
             userId = ""
             completion(nil)
         } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
+            print("Error signing out: %@", signOutError)
             completion("Error")
         }
     }
@@ -84,16 +84,15 @@ class FirebaseManager {
                 group.enter()
                 db.collection("Orders").document(orderId).getDocument { document, error in
                     guard error == nil else { return }
-                    let order = Order(
-                        id: document?.get("id") as! String,
-                        name: document?.get("name") as! String,
-                        description: document?.get("description") as! String,
-                        status: document?.get("status") as! String,
-                        coast: document?.get("coast") as? String,
-                        comment: document?.get("comment") as? String,
-                        position: document?.get("position") as? String
-                    )
-                    orders.append(order)
+                    if let document = document {
+                        do {
+                            let order = try document.data(as: Order.self)
+                            orders.append(order)
+                        }
+                        catch {
+                            print(error)
+                        }
+                    }
                     group.leave()
                 }
             }

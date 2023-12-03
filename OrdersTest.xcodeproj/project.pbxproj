@@ -25,10 +25,18 @@
 		AED7139B2B1B63F0000AE642 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7139A2B1B63F0000AE642 /* OrdersViewController.swift */; };
 		AED713A12B1B72A0000AE642 /* OrdersTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED713A02B1B72A0000AE642 /* OrdersTableViewDelegate.swift */; };
 		AED713A42B1B7322000AE642 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED713A32B1B7322000AE642 /* OrderTableViewCell.swift */; };
-		AED713CA2B1B9AA2000AE642 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED713C92B1B9AA2000AE642 /* TableViewCell.swift */; };
 		AED713CD2B1BB93E000AE642 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED713CC2B1BB93E000AE642 /* TabBarViewController.swift */; };
 		AED713D22B1BBABA000AE642 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED713D12B1BBABA000AE642 /* MapsView.swift */; };
 		AED713D42B1BBAED000AE642 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED713D32B1BBAED000AE642 /* MapsViewController.swift */; };
+		AED713D92B1BC3B9000AE642 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AED713D82B1BC3B9000AE642 /* GoogleService-Info.plist */; };
+		AED713DC2B1C9C22000AE642 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED713DB2B1C9C22000AE642 /* FirebaseManager.swift */; };
+		AED713DF2B1CA542000AE642 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED713DE2B1CA542000AE642 /* User.swift */; };
+		AED713EA2B1CAAD3000AE642 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED713E92B1CAAD3000AE642 /* Order.swift */; };
+		AED713EC2B1CAB8E000AE642 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED713EB2B1CAB8E000AE642 /* Status.swift */; };
+		AED713FD2B1CDF09000AE642 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AED713FC2B1CDF09000AE642 /* FirebaseAuth */; };
+		AED713FF2B1CDF09000AE642 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AED713FE2B1CDF09000AE642 /* FirebaseDatabase */; };
+		AED714012B1CDF09000AE642 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AED714002B1CDF09000AE642 /* FirebaseFirestore */; };
+		AED714032B1CDF09000AE642 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AED714022B1CDF09000AE642 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,10 +60,14 @@
 		AED7139A2B1B63F0000AE642 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		AED713A02B1B72A0000AE642 /* OrdersTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewDelegate.swift; sourceTree = "<group>"; };
 		AED713A32B1B7322000AE642 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
-		AED713C92B1B9AA2000AE642 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		AED713CC2B1BB93E000AE642 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		AED713D12B1BBABA000AE642 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
 		AED713D32B1BBAED000AE642 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		AED713D82B1BC3B9000AE642 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AED713DB2B1C9C22000AE642 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		AED713DE2B1CA542000AE642 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AED713E92B1CAAD3000AE642 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		AED713EB2B1CAB8E000AE642 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED713FF2B1CDF09000AE642 /* FirebaseDatabase in Frameworks */,
+				AED714032B1CDF09000AE642 /* FirebaseStorage in Frameworks */,
+				AED713FD2B1CDF09000AE642 /* FirebaseAuth in Frameworks */,
+				AED714012B1CDF09000AE642 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +104,14 @@
 		AEC2DAAC2B19F2F500D10474 /* OrdersTest */ = {
 			isa = PBXGroup;
 			children = (
+				AEC2DAC12B19F3B700D10474 /* Application */,
+				AED713DD2B1CA53C000AE642 /* Model */,
+				AED713DA2B1C9C14000AE642 /* Manager */,
 				AED7138F2B1B5EC9000AE642 /* Base */,
 				AED713CE2B1BBA98000AE642 /* Maps */,
 				AED713932B1B6133000AE642 /* Orders */,
 				AEC2DACC2B1A6F7600D10474 /* Profile */,
 				AEC2DAC32B1A457800D10474 /* Auth */,
-				AEC2DAC12B19F3B700D10474 /* Application */,
 				AEC2DAC22B19F3C600D10474 /* SupportingFiles */,
 			);
 			path = OrdersTest;
@@ -114,6 +132,7 @@
 				AEC2DAB62B19F2F600D10474 /* Assets.xcassets */,
 				AEC2DAB82B19F2F600D10474 /* LaunchScreen.storyboard */,
 				AEC2DABB2B19F2F600D10474 /* Info.plist */,
+				AED713D82B1BC3B9000AE642 /* GoogleService-Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -229,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				AED713A32B1B7322000AE642 /* OrderTableViewCell.swift */,
-				AED713C92B1B9AA2000AE642 /* TableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -267,6 +285,24 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		AED713DA2B1C9C14000AE642 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AED713DB2B1C9C22000AE642 /* FirebaseManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		AED713DD2B1CA53C000AE642 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AED713DE2B1CA542000AE642 /* User.swift */,
+				AED713E92B1CAAD3000AE642 /* Order.swift */,
+				AED713EB2B1CAB8E000AE642 /* Status.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,6 +319,12 @@
 			dependencies = (
 			);
 			name = OrdersTest;
+			packageProductDependencies = (
+				AED713FC2B1CDF09000AE642 /* FirebaseAuth */,
+				AED713FE2B1CDF09000AE642 /* FirebaseDatabase */,
+				AED714002B1CDF09000AE642 /* FirebaseFirestore */,
+				AED714022B1CDF09000AE642 /* FirebaseStorage */,
+			);
 			productName = OrdersTest;
 			productReference = AEC2DAAA2B19F2F500D10474 /* OrdersTest.app */;
 			productType = "com.apple.product-type.application";
@@ -311,6 +353,9 @@
 				Base,
 			);
 			mainGroup = AEC2DAA12B19F2F500D10474;
+			packageReferences = (
+				AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */,
+			);
 			productRefGroup = AEC2DAAB2B19F2F500D10474 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -327,6 +372,7 @@
 			files = (
 				AEC2DABA2B19F2F600D10474 /* LaunchScreen.storyboard in Resources */,
 				AEC2DAB72B19F2F600D10474 /* Assets.xcassets in Resources */,
+				AED713D92B1BC3B9000AE642 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +392,9 @@
 				AED713D22B1BBABA000AE642 /* MapsView.swift in Sources */,
 				AEC2DAC72B1A45BF00D10474 /* AuthView.swift in Sources */,
 				AED713922B1B5EDA000AE642 /* BaseMainView.swift in Sources */,
+				AED713DF2B1CA542000AE642 /* User.swift in Sources */,
+				AED713DC2B1C9C22000AE642 /* FirebaseManager.swift in Sources */,
+				AED713EC2B1CAB8E000AE642 /* Status.swift in Sources */,
 				AED713972B1B614B000AE642 /* OrdersView.swift in Sources */,
 				AEC2DAD02B1A6F9200D10474 /* ProfileViewController.swift in Sources */,
 				AEC2DAD62B1A714400D10474 /* ProfileViewDelegate.swift in Sources */,
@@ -354,7 +403,7 @@
 				AEC2DAD22B1A70A000D10474 /* AuthViewControllerDelegate.swift in Sources */,
 				AED713D42B1BBAED000AE642 /* MapsViewController.swift in Sources */,
 				AEC2DAD82B1A726600D10474 /* ProfileViewControllerDelegate.swift in Sources */,
-				AED713CA2B1B9AA2000AE642 /* TableViewCell.swift in Sources */,
+				AED713EA2B1CAAD3000AE642 /* Order.swift in Sources */,
 				AEC2DAB02B19F2F500D10474 /* SceneDelegate.swift in Sources */,
 				AED713A12B1B72A0000AE642 /* OrdersTableViewDelegate.swift in Sources */,
 			);
@@ -428,6 +477,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -481,6 +531,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -500,8 +551,8 @@
 				INFOPLIST_FILE = OrdersTest/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,9 +560,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ttt.OrdersTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -527,8 +581,8 @@
 				INFOPLIST_FILE = OrdersTest/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,9 +590,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ttt.OrdersTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -564,6 +621,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AED713FC2B1CDF09000AE642 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			productName = FirebaseAuth;
+		};
+		AED713FE2B1CDF09000AE642 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			productName = FirebaseDatabase;
+		};
+		AED714002B1CDF09000AE642 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			productName = FirebaseFirestore;
+		};
+		AED714022B1CDF09000AE642 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AEC2DAA22B19F2F500D10474 /* Project object */;
 }
