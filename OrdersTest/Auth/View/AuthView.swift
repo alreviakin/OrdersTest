@@ -65,6 +65,15 @@ class AuthView: UIView {
         btn.addTarget(self, action: #selector(signIn), for: .touchUpInside)
         return btn
     }()
+    private let errorLabel: UILabel = {
+       let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Неправильные логин и пароль"
+        label.textColor = .red
+        label.isHidden = true
+        label.textAlignment = .center
+        return label
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -82,6 +91,7 @@ class AuthView: UIView {
         self.addSubview(emailTextField)
         self.addSubview(passwordTextField)
         self.addSubview(signInButton)
+        self.addSubview(errorLabel)
     }
     
     override func layoutSubviews() {
@@ -109,6 +119,8 @@ class AuthView: UIView {
                 signInButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
                 signInButton.heightAnchor.constraint(equalToConstant: 50),
                 
+                errorLabel.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 30),
+                errorLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
             ]
         )
     }
@@ -119,6 +131,24 @@ extension AuthView {
     @objc
     private func signIn() {
         delegate?.signIn()
+    }
+}
+
+extension AuthView {
+    func getEmail() -> String? {
+        return emailTextField.text
+    }
+    
+    func getPassword() -> String? {
+        return passwordTextField.text
+    }
+    
+    func showError() {
+        errorLabel.isHidden = false
+        errorLabel.alpha = 0
+        UIView.animate(withDuration: 0.5) {
+            self.errorLabel.alpha = 1
+        }
     }
 }
 

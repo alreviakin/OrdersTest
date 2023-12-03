@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 
 
@@ -26,9 +28,23 @@ class AuthViewController: UIViewController {
 
 extension AuthViewController: AuthViewControllerDelegate {
     func signIn() {
+        let email = authView.getEmail()
+        let password = authView.getPassword()
         
-        let vc = OrdersViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        if email == "" || email == nil || password == nil || password == "" {
+            authView.showError()
+        } else {
+            FirebaseManager.shared.logIn(email: email!, passworrd: password!) {[weak self] error in
+                guard let self else { return }
+                if error != nil {
+                    self.authView.showError()
+                } else {
+                    let vc = OrdersViewController()
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true)
+                }
+            }
+            
+        }
     }
 }
