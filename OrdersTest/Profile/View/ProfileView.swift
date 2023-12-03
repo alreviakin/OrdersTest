@@ -11,13 +11,6 @@ class ProfileView: BaseMainView {
     
     weak var delegate: ProfileViewControllerDelegate?
     
-//    private let titleLabel: UILabel = {
-//       let label = UILabel()
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        label.text = "MyOrders"
-//        label.font = UIFont.systemFont(ofSize: 45, weight: .bold)
-//        return label
-//    }()
     private var profileImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -116,5 +109,12 @@ class ProfileView: BaseMainView {
 @objc extension ProfileView: ProfileViewDelegate {
     func logOut() {
         delegate?.logOut()
+    }
+}
+
+extension ProfileView {
+    func setLabels(user: User) {
+        usernameLabel.text = user.fullName
+        orderCountLabel.text = user.countOrders
     }
 }

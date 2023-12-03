@@ -15,6 +15,10 @@ class ProfileViewController: UIViewController {
         self.view = profileView
         profileView.delegate = self
         profileView.baseDelegate = self
+        FirebaseManager.shared.getUser { [weak self] user in
+            guard let self, let user else { return }
+            profileView.setLabels(user: user)
+        }
     }
 
     override func viewDidLoad() {
@@ -24,7 +28,13 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: ProfileViewControllerDelegate {
     func logOut() {
-        dismiss(animated: true)
+        FirebaseManager.shared.logOut() { error in
+            guard error == nil else { return }
+            let vc = AuthViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+        
     }
 }
 
