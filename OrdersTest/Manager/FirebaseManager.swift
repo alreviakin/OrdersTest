@@ -75,7 +75,6 @@ class FirebaseManager {
         db.collection("Users").document(userId).getDocument { documnent, error in
             guard error == nil else { return }
             ordersId = documnent?.get("ordersId") as! [String]
-            print(ordersId)
             group.leave()
         }
         
@@ -99,6 +98,41 @@ class FirebaseManager {
             group.notify(queue: .main) {
                 completion(orders)
             }
+        }
+    }
+    
+    func setStatusOrder(status: String, uid: String, completion: @escaping (String?) -> Void) {
+        let db = configureFB()
+        if status == "finished" {
+            db.collection("Orders").document(uid).getDocument { document, error in
+                if error != nil {
+                    completion("Error")
+                    return
+                }
+                if let document = document {
+                    do {
+                        let order = try document.data(as: Order.self)
+                        //                    print(order.comment)
+                        //                    print(order.coast)
+                        if order.comment == nil || order.comment! == "nil" || order.coast == nil || order.coast! == "nil" {
+                            completion("Error")
+                            return
+                        } else {
+                            db.collection("Orders").document(uid).updateData(["status": status])
+                            completion(nil)
+                            return
+                        }
+                    }
+                    catch {
+                        completion("Error")
+                        return
+                    }
+                }
+            }
+        } else {
+            db.collection("Orders").document(uid).updateData(["status": status])
+            completion(nil)
+            return
         }
     }
 }

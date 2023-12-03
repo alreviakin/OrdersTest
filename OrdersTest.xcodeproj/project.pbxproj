@@ -37,6 +37,11 @@
 		AED713FF2B1CDF09000AE642 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AED713FE2B1CDF09000AE642 /* FirebaseDatabase */; };
 		AED714012B1CDF09000AE642 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AED714002B1CDF09000AE642 /* FirebaseFirestore */; };
 		AED714032B1CDF09000AE642 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AED714022B1CDF09000AE642 /* FirebaseStorage */; };
+		AED714282B1D1D0C000AE642 /* OrderCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED714272B1D1D0C000AE642 /* OrderCellDelegate.swift */; };
+		AED7142F2B1D1E4A000AE642 /* ChangeStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7142E2B1D1E4A000AE642 /* ChangeStatusViewController.swift */; };
+		AED714322B1D1E5E000AE642 /* ChangeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED714312B1D1E5E000AE642 /* ChangeStatusView.swift */; };
+		AED714342B1D22D4000AE642 /* StatusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED714332B1D22D4000AE642 /* StatusButton.swift */; };
+		AED714362B1D2C4A000AE642 /* ChangeStatusViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED714352B1D2C4A000AE642 /* ChangeStatusViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +73,11 @@
 		AED713DE2B1CA542000AE642 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AED713E92B1CAAD3000AE642 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		AED713EB2B1CAB8E000AE642 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		AED714272B1D1D0C000AE642 /* OrderCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellDelegate.swift; sourceTree = "<group>"; };
+		AED7142E2B1D1E4A000AE642 /* ChangeStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeStatusViewController.swift; sourceTree = "<group>"; };
+		AED714312B1D1E5E000AE642 /* ChangeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeStatusView.swift; sourceTree = "<group>"; };
+		AED714332B1D22D4000AE642 /* StatusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusButton.swift; sourceTree = "<group>"; };
+		AED714352B1D2C4A000AE642 /* ChangeStatusViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeStatusViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +120,7 @@
 				AED7138F2B1B5EC9000AE642 /* Base */,
 				AED713CE2B1BBA98000AE642 /* Maps */,
 				AED713932B1B6133000AE642 /* Orders */,
+				AED714292B1D1DED000AE642 /* ChangeStatus */,
 				AEC2DACC2B1A6F7600D10474 /* Profile */,
 				AEC2DAC32B1A457800D10474 /* Auth */,
 				AEC2DAC22B19F3C600D10474 /* SupportingFiles */,
@@ -248,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				AED713A32B1B7322000AE642 /* OrderTableViewCell.swift */,
+				AED714272B1D1D0C000AE642 /* OrderCellDelegate.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -303,6 +315,33 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AED714292B1D1DED000AE642 /* ChangeStatus */ = {
+			isa = PBXGroup;
+			children = (
+				AED714302B1D1E4D000AE642 /* View */,
+				AED7142D2B1D1E3D000AE642 /* Controller */,
+			);
+			path = ChangeStatus;
+			sourceTree = "<group>";
+		};
+		AED7142D2B1D1E3D000AE642 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AED7142E2B1D1E4A000AE642 /* ChangeStatusViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AED714302B1D1E4D000AE642 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AED714312B1D1E5E000AE642 /* ChangeStatusView.swift */,
+				AED714332B1D22D4000AE642 /* StatusButton.swift */,
+				AED714352B1D2C4A000AE642 /* ChangeStatusViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,7 +393,7 @@
 			);
 			mainGroup = AEC2DAA12B19F2F500D10474;
 			packageReferences = (
-				AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */,
+				AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = AEC2DAAB2B19F2F500D10474 /* Products */;
 			projectDirPath = "";
@@ -387,10 +426,12 @@
 				AEC2DAC52B1A459600D10474 /* AuthViewController.swift in Sources */,
 				AED713A42B1B7322000AE642 /* OrderTableViewCell.swift in Sources */,
 				AEC2DADC2B1A8C7900D10474 /* ProfileView.swift in Sources */,
+				AED714342B1D22D4000AE642 /* StatusButton.swift in Sources */,
 				AED713CD2B1BB93E000AE642 /* TabBarViewController.swift in Sources */,
 				AED7139B2B1B63F0000AE642 /* OrdersViewController.swift in Sources */,
 				AED713D22B1BBABA000AE642 /* MapsView.swift in Sources */,
 				AEC2DAC72B1A45BF00D10474 /* AuthView.swift in Sources */,
+				AED714322B1D1E5E000AE642 /* ChangeStatusView.swift in Sources */,
 				AED713922B1B5EDA000AE642 /* BaseMainView.swift in Sources */,
 				AED713DF2B1CA542000AE642 /* User.swift in Sources */,
 				AED713DC2B1C9C22000AE642 /* FirebaseManager.swift in Sources */,
@@ -400,8 +441,11 @@
 				AEC2DAD62B1A714400D10474 /* ProfileViewDelegate.swift in Sources */,
 				AEC2DACB2B1A6F2700D10474 /* AuthViewDelegate.swift in Sources */,
 				AED713992B1B634C000AE642 /* BaseControllerDelegate.swift in Sources */,
+				AED714362B1D2C4A000AE642 /* ChangeStatusViewDelegate.swift in Sources */,
+				AED714282B1D1D0C000AE642 /* OrderCellDelegate.swift in Sources */,
 				AEC2DAD22B1A70A000D10474 /* AuthViewControllerDelegate.swift in Sources */,
 				AED713D42B1BBAED000AE642 /* MapsViewController.swift in Sources */,
+				AED7142F2B1D1E4A000AE642 /* ChangeStatusViewController.swift in Sources */,
 				AEC2DAD82B1A726600D10474 /* ProfileViewControllerDelegate.swift in Sources */,
 				AED713EA2B1CAAD3000AE642 /* Order.swift in Sources */,
 				AEC2DAB02B19F2F500D10474 /* SceneDelegate.swift in Sources */,
@@ -623,7 +667,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */ = {
+		AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -636,22 +680,22 @@
 /* Begin XCSwiftPackageProductDependency section */
 		AED713FC2B1CDF09000AE642 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
 		AED713FE2B1CDF09000AE642 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
 		AED714002B1CDF09000AE642 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
 		AED714022B1CDF09000AE642 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = AED713FB2B1CDF09000AE642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */

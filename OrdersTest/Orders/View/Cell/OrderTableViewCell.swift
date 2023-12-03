@@ -9,6 +9,8 @@ import UIKit
 
 class OrderTableViewCell: UITableViewCell {
     
+    weak var delegate: OrderCellDelegate?
+    
     private var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -27,11 +29,12 @@ class OrderTableViewCell: UITableViewCell {
         label.numberOfLines = 0
         return label
     }()
-    private var changeStatusButton: UIButton = {
+    private lazy var changeStatusButton: UIButton = {
        let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Изменить", for: .normal)
         btn.setTitleColor(UIColor(red: 0, green: 122/255, blue: 1, alpha: 1), for: .normal)
+        btn.addTarget(self, action: #selector(changeStatus), for: .touchUpInside)
         return btn
     }()
     private var descriptionLabel: UILabel = {
@@ -68,6 +71,9 @@ class OrderTableViewCell: UITableViewCell {
     }
     
     func configureCell(order: Order) {
+        if order.status == "finished" || order.status == "cancelled" {
+            changeStatusButton.isHidden = true
+        }
         titleLabel.text = order.name + " - " + order.id
         statusLabel.text = "Статус - " + order.status
         descriptionLabel.text = "Описание - " + order.description
@@ -115,5 +121,20 @@ class OrderTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        titleLabel.text = nil
+        statusLabel.text = nil
+        descriptionLabel.text = nil
+        coastLabel.text = nil
+        commentLabel.text = nil
+    }
+}
+
+extension OrderTableViewCell {
+    @objc
+    func changeStatus() {
+        delegate?.changeStatus(tag: self.tag)
     }
 }

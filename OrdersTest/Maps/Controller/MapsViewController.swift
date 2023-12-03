@@ -13,9 +13,9 @@ class MapsViewController: UIViewController {
     
     override func loadView() {
         self.view = mapsView
+        mapsView.baseDelegate = self
         FirebaseManager.shared.getOrders { orders in
             for order in orders {
-                print(order.position)
                 guard order.position != nil else {
                     continue
                 }
@@ -31,4 +31,18 @@ class MapsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+}
+
+extension MapsViewController: BaseControllerDelegaete {
+    func transitionToOrders() {
+        //
+    }
+    
+    func transitionToProfile() {
+        let vc = ProfileViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    
 }

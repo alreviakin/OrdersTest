@@ -55,10 +55,23 @@ extension OrdersViewController: OrdersTableViewDelegate {
             return UITableViewCell()
         }
         cell.configureCell(order: orders[indexPath.row])
+        cell.delegate = self
+        cell.tag = indexPath.row
         return cell
     }
     
 }
+
+extension OrdersViewController: OrderCellDelegate {
+    func changeStatus(tag: Int) {
+        let vc = ChangeStatusViewController(status: orders[tag].status, uid: orders[tag].id)
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    
+}
+
 
 
 
