@@ -67,6 +67,14 @@ class OrderTableViewCell: UITableViewCell {
         configure()
     }
     
+    func configureCell(order: Order) {
+        titleLabel.text = order.name + " - " + order.id
+        statusLabel.text = "Статус - " + order.status
+        descriptionLabel.text = "Описание - " + order.description
+        coastLabel.text = "Цена - " + (order.coast ?? "nil")
+        commentLabel.text = "Комментарий - " + (order.comment ?? "nil")
+    }
+    
     private func configure() {
         self.selectionStyle = UITableViewCell.SelectionStyle.none
         

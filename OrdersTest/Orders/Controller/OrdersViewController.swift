@@ -10,6 +10,7 @@ import UIKit
 class OrdersViewController: UIViewController {
     
     lazy var ordersView = OrdersView(self)
+    var orders: [Order] = []
 
     
     override func loadView() {
@@ -17,6 +18,11 @@ class OrdersViewController: UIViewController {
         ordersView.baseDelegate = self
         ordersView.tableDelegate = self
         self.view = ordersView
+        FirebaseManager.shared.getOrders { [weak self] orders in
+            guard let self else { return }
+            self.orders = orders
+            self.ordersView.reloadTable()
+        }
     }
 
     override func viewDidLoad() {
@@ -41,30 +47,17 @@ extension OrdersViewController: BaseControllerDelegaete {
 
 extension OrdersViewController: OrdersTableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return orders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? OrderTableViewCell else {
             return UITableViewCell()
         }
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NotesCell
-//
-//                let m = NotesModel()
-//
-//                if indexPath.row == 3 {
-//                    m.name = "This is a very long caption. It will demonstrate how the cell height is auto-sized when the text is long enough to wrap to multiple lines."
-//                } else {
-//                    m.name = "Caption \(indexPath.row)"
-//                }
-//
-//                cell.configure(with: m)
+        cell.configureCell(order: orders[indexPath.row])
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
 }
 
 

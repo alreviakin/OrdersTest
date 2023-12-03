@@ -69,3 +69,9 @@ class OrdersView: BaseMainView {
     }
 
 }
+
+extension OrdersView {
+    func reloadTable() {
+        tableView.reloadData()
+    }
+}
