@@ -11,6 +11,7 @@ struct User {
     let firstname: String
     let secondName: String
     let countOrders: String
+    var ordersId: [String]?
     
     var fullName: String {
         firstname + " " + secondName

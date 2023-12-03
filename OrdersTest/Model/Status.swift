@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+enum Status: String {
+    case new
+    case inProgress
+    case cancelled
+    case completed
+    case finished
+}

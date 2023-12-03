@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Order {
+    let id: String
+    let name: String
+    let description: String
+    let status: String
+    var coast: String?
+    var comment: String?
+    var position: String?
+}
