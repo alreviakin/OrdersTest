@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBX5JlwXgRW6DGV_ElQ0LRh--uEdZAhTh8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>759606081815</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ttt.OrdersTest</string>
+	<key>PROJECT_ID</key>
+	<string>orderstest-f9bbf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>orderstest-f9bbf.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:759606081815:ios:0019bead4d88e988c39f52</string>
+	<key>DATABASE_URL</key>
+	<string>https://orderstest-f9bbf-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
