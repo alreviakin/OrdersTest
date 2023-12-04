@@ -15,6 +15,9 @@ class AuthViewController: UIViewController {
     
     private var authView = AuthView()
     
+    
+    
+    
     override func loadView() {
         self.view = authView
         authView.delegate = self
