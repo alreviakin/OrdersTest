@@ -14,6 +14,10 @@ class MapsViewController: UIViewController {
     override func loadView() {
         self.view = mapsView
         mapsView.baseDelegate = self
+        
+        if 1 < 0 {
+            print("Yes")
+        }
         FirebaseManager.shared.getOrders { orders in
             for order in orders {
                 guard order.position != nil else {
